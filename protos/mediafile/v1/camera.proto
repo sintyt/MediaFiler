@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option csharp_namespace = "MediaFileServer";
+
+package mediafile.v1;
+
+service MediaFileService {
+  rpc Camera (CameraRequest) returns (CameraResponse);
+  rpc ListCamera (ListCameraRequest) returns (ListCameraResponse);
+}
+
+message CameraRequest {
+  string model = 1;
+}
+
+message ListCameraRequest {
+  string all = 1;
+}
+
+message CameraResponse {
+  Camera camera = 1;
+}
+
+message ListCameraResponse {
+  repeated Camera cameras = 1;
+}
+
+// PhotoManager.Cameraレコードに相当するメッセージ
+message Camera {
+  string maker = 1;
+  string model = 2;
+  string label = 3;
+}

@@ -8,9 +8,16 @@
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "generate": "buf generate"
   },
   "dependencies": {
+    "@bufbuild/protobuf": "^2.1.0",
+    "@bufbuild/protoc-gen-es": "^2.1.0",
+    "@connectrpc/connect": "^1.5.0",
+    "@connectrpc/connect-node": "^1.5.0",
+    "@connectrpc/connect-web": "^1.5.0",
+    "@connectrpc/protoc-gen-connect-es": "^1.5.0",
     "@remix-run/node": "^2.12.0",
     "@remix-run/react": "^2.12.0",
     "@remix-run/serve": "^2.12.0",
@@ -19,6 +26,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@bufbuild/buf": "^1.41.0",
     "@remix-run/dev": "^2.12.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
@@ -31,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "google-protobuf": "^3.21.4",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.1.6",
